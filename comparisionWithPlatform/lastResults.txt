@@ -1,0 +1,11 @@
+                                                       Java[option=OFF] &     Java[option=ASSIGNMENT] &        Java[option=RESOLVE] &            Java[option=DFA] &                      UNeDfa \\
+    concatenation with static final field &                        null &                   0.7704 ms &                   0.1587 ms &                        null &                   0.2064 ms \\ took time = 12907 ms
+           concatenation with final field &                        null &                   0.7461 ms &                   0.2432 ms &                        null &                        null \\ took time = 10985 ms
+                      many concatenations &                   0.9373 ms &                   0.9120 ms &                   0.9048 ms &                   0.8959 ms &                   1.1343 ms \\ took time = 49311 ms
+    concatenation with many reassignments &                        null &                        null &                   1.2641 ms &                   2.3366 ms &                   8.9878 ms \\ took time = 127515 ms
+                                  literal &                   0.0038 ms &                   0.0041 ms &                   0.0041 ms &                   0.0035 ms &                   0.0461 ms \\ took time = 1581 ms
+         concatenations of many variables &                        null &                 110.8165 ms &                  37.2773 ms &                  60.0382 ms &                  14.8669 ms \\ took time = 2233493 ms
+             concatenation with final var &                        null &                   0.3150 ms &                   0.1360 ms &                   0.1648 ms &                   0.0868 ms \\ took time = 8234 ms
+                     simple concatenation &                   0.0092 ms &                   0.0094 ms &                   0.0084 ms &                   0.0094 ms &                   0.0568 ms \\ took time = 1969 ms
+          concatenation with reassignment &                        null &                        null &                   0.0773 ms &                   0.1133 ms &                   0.1081 ms \\ took time = 3746 ms
+                   concatenation with var &                        null &                   0.1618 ms &                   0.0472 ms &                   0.0681 ms &                   0.0811 ms \\ took time = 4605 ms
