@@ -10,6 +10,7 @@ import org.intellij.plugins.intelliLang.Configuration
 import org.intellij.plugins.intelliLang.util.SubstitutedExpressionEvaluationHelper
 import org.jetbrains.uast.UExpression
 import org.jetbrains.uast.UReturnExpression
+import org.jetbrains.uast.analysis.UNeDfaConfiguration
 import org.jetbrains.uast.analysis.UStringEvaluator
 import org.jetbrains.uast.getUastParentOfType
 import kotlin.system.measureTimeMillis
@@ -174,7 +175,11 @@ class JavaConcatenationTest : LightJavaCodeInsightFixtureTestCase() {
             "Java[option=ASSIGNMENT]" to { evaluateWith(Configuration.DfaOption.ASSIGNMENTS) },
             "Java[option=RESOLVE]" to { evaluateWith(Configuration.DfaOption.RESOLVE) },
             "Java[option=DFA]" to { evaluateWith(Configuration.DfaOption.DFA) },
-            "UNeDfa" to { UStringEvaluator().calculateValue(expression)?.valueIfKnown }
+            "UNeDfa" to {
+                UStringEvaluator()
+                    .calculateValue(expression, UNeDfaConfiguration(calculateNonStaticPrivateFields = true))
+                    ?.valueIfKnown
+            }
         )
 
         evaluators.values.forEach { it() }

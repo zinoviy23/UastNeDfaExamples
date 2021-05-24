@@ -29,7 +29,7 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    localPath = "/Users/aleksandr.izmaylov/Library/Application Support/JetBrains/Toolbox/apps/IDEA-C/ch-1/212.3289/IntelliJ IDEA 2021.2 CE EAP.app"
+    localPath = "/Users/aleksandr.izmaylov/Library/Application Support/JetBrains/Toolbox/apps/IDEA-C/ch-1/212.3340/IntelliJ IDEA 2021.2 CE EAP.app"
 //    localSourcesPath = "/Users/aleksandr.izmaylov/NewIDEA"
 //    version = "212.3116-EAP-CANDIDATE-SNAPSHOT"
     setPlugins(
